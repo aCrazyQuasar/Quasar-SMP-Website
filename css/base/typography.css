@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Minecraft Ten';
+  src: url('/assets/fonts/Minecraft-Ten.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Minecraft Regular';
+  src: url('/assets/fonts/Minecraft-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+a{
+    font-family: "minecraft ten";
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Minecraft Ten", Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
+p, a, li, label{
+  font-family: "Minecraft Regular", Arial, Helvetica, sans-serif;
+  color: var(--text-secondary);
+}
+a{
+  text-decoration: underline;
+  color: var(--accent-color);
+}

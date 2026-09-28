@@ -1,0 +1,98 @@
+.minecraft-button {
+    font-family: var(--decorative-font);
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: var(--text-disabled) 0 .1em 0; 
+    color: var(--text-color); 
+    background-color: var(--subtle-color);
+    position: relative;
+    padding: 1em;
+    padding-top: .25em;
+    padding-bottom: .5em;
+    border-radius: .1rem;
+    box-sizing: border-box;
+    margin: .1em;
+    border: none;
+    user-select: none;
+}
+.minecraft-button::before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -.175em;
+    width: 105%;
+    height: 100%;
+    background-color: var(--subtle-color-dark);
+    z-index: -1;
+    border: .07em solid var(--text-muted);
+    cursor: pointer;
+}
+.minecraft-button::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: -0.175em;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    background-image: linear-gradient(
+        var(--subtle-color-light) 50%,
+        var(--subtle-color-dark) 50% 100%
+    );
+    z-index: -1;
+    border: .07em solid var(--text-muted);
+}
+.minecraft-button:hover {
+  background-color: var(--subtle-color-light);
+}
+.minecraft-button:hover::after{
+    background-image: linear-gradient(
+        var(--subtle-color-lightest) 50%,
+        var(--subtle-color-dark) 50% 100%
+    );
+    z-index: -1;
+}
+.minecraft-button:active{
+    background-color: var(--subtle-color);
+}
+.minecraft-button:hover::after{
+    background-image: linear-gradient(
+        var(--subtle-color-light) 50%,
+        var(--subtle-color-dark) 50% 100%
+    );
+    z-index: -1;
+}
+.minecraft-button.secondary{
+    background-color: var(--subtle-two);
+}
+.minecraft-button.secondary::before{
+    background-color: var(--subtle-two-dark);
+}
+.minecraft-button.secondary::after{
+    background-image: linear-gradient(
+        var(--subtle-two-light) 50%,
+        var(--subtle-two-dark) 50% 100%
+    );
+}
+.minecraft-button:hover {
+  background-color: var(--subtle-two-light);
+}
+.minecraft-button:hover::after{
+    background-image: linear-gradient(
+        var(--subtle-two-lightest) 50%,
+        var(--subtle-two-dark) 50% 100%
+    );
+    z-index: -1;
+}
+.minecraft-button:active{
+    background-color: var(--subtle-two);
+}
+.minecraft-button:hover::after{
+    background-image: linear-gradient(
+        var(--subtle-two-light) 50%,
+        var(--subtle-two-dark) 50% 100%
+    );
+    z-index: -1;
+}

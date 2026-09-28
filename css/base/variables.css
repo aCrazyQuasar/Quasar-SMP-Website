@@ -1,0 +1,65 @@
+:root{
+    --base-color: #02010A;
+    --base-secondary: #0e0e0e;
+
+    --surface-color: #1c1c1c;
+    --surface-light: #202020;
+    --surface-hover: #292929;
+    --surface-active: #333333;
+
+    --text-color: #f0f0f0;
+    --text-secondary: #dedede;
+    --text-muted: #9e9e9e;
+    --text-disabled: #616161;
+    --text-on-brand: #ffffff;
+    --text-on-accent: #000000;
+    
+    --brand-color: #C122C1;
+    --brand-hover: #a31ba3;
+    --brand-active: #851485;
+    --brand-subtle: rgba(193, 34, 193, 0.15);
+
+    --accent-color: #20B9DF;
+    --accent-hover: #1898b8;
+    --accent-active: #127892;
+    --accent-subtle: rgba(32, 185, 223, 0.15);
+
+    --subtle-color-lightest: #2c0f8c; /* Background tints, subtle card fills */
+    --subtle-color-light:    #1b0170; /* Muted accents, borders, secondary text */
+    --subtle-color:          #140152; /* Base color */
+    --subtle-color-dark:     #0C0133; /* Dark card surfaces, container fills */
+    --subtle-color-darkest:  #040011; /* Deepest background contrast */
+
+    --subtle-two-lightest:   #0f1062; /* Hover fills, subtle section backgrounds */
+    --subtle-two-light:      #070847; /* Subtle highlights, icons, secondary borders */
+    --subtle-two:            #04052E; /* Base color */
+    --subtle-two-dark:       #02031B; /* Main dark app background */
+    --subtle-two-darkest:    #000108; /* High-contrast canvas / base background */
+
+    --color-success: #10B981;
+    --color-success-subtle: rgba(16, 185, 129, 0.15);
+
+    --color-warning: #F59E0B;
+    --color-warning-subtle: rgba(245, 158, 11, 0.15);
+
+    --color-danger: #EF4444;
+    --color-danger-subtle: rgba(239, 68, 68, 0.15);
+
+    --color-info: #3B82F6;
+    --color-info-subtle: rgba(59, 130, 246, 0.15);
+
+    --border-subtle: #262626;
+    --border-color: #383838;
+    --border-strong: #525252;
+    --focus-ring: #20B9DF;
+
+    --overlay-backdrop: rgba(2, 1, 10, 0.75);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+    --shadow-glow-brand: 0 0 20px rgba(193, 34, 193, 0.35);
+    --shadow-glow-accent: 0 0 20px rgba(32, 185, 223, 0.35);
+
+    --decorative-font: "Minecraft Ten", Arial;
+    --legible-font: "Minecraft Regular", Arial;
+}

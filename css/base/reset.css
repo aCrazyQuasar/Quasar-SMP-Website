@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*::selection{
+    background: var(--subtle-color);
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body{
+    background-color: var(--base-color);
+    position: relative;
+}
