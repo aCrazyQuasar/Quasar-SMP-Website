@@ -13,4 +13,5 @@ html{
 body{
     background-color: var(--base-color);
     position: relative;
+    overflow-x: hidden;
 }

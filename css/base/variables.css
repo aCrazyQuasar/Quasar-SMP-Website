@@ -36,17 +36,33 @@
     --subtle-two-dark:       #02031B; /* Main dark app background */
     --subtle-two-darkest:    #000108; /* High-contrast canvas / base background */
 
-    --color-success: #10B981;
-    --color-success-subtle: rgba(16, 185, 129, 0.15);
+     /* Success */
+    --success-background: #052E16;
+    --success-surface: #14532D;
+    --success-border: #16A34A;
+    --success: #22C55E;
+    --success-text: #86EFAC;
 
-    --color-warning: #F59E0B;
-    --color-warning-subtle: rgba(245, 158, 11, 0.15);
+    /* Warning */
+    --warning-background: #451A03;
+    --warning-surface: #78350F;
+    --warning-border: #D97706;
+    --warning: #F59E0B;
+    --warning-text: #FCD34D;
 
-    --color-danger: #EF4444;
-    --color-danger-subtle: rgba(239, 68, 68, 0.15);
+    /* Error */
+    --error-background: #450A0A;
+    --error-surface: #7F1D1D;
+    --error-border: #DC2626;
+    --error: #EF4444;
+    --error-text: #FCA5A5;
 
-    --color-info: #3B82F6;
-    --color-info-subtle: rgba(59, 130, 246, 0.15);
+    /* Info */
+    --info-background: #172554;
+    --info-surface: #1E40AF;
+    --info-border: #2563EB;
+    --info: #3B82F6;
+    --info-text: #93C5FD;
 
     --border-subtle: #262626;
     --border-color: #383838;

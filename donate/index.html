@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Redirecting...</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #080b12;
+            color: #fff;
+        }
+
+        .container {
+            width: min(90%, 500px);
+            text-align: center;
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 2rem;
+            border: 4px solid rgba(255, 255, 255, 0.12);
+            border-top-color: #5b9cff;
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: #9ca3af;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        #countdown {
+            color: #5b9cff;
+            font-weight: 600;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="loader"></div>
+
+        <h1>Redirecting Shortly...</h1>
+
+        <p>
+            You'll be redirected in
+            <span id="countdown">5</span>
+            seconds.
+        </p>
+        <br>
+        <p>If you do not not wish to continue, you can <a href="/">click here</a>.</p>
+    </main>
+
+    <script>
+        const redirectUrl = "https://www.bisecthosting.com/donate/586a81b4";
+        let seconds = 5;
+
+        const countdown = document.getElementById("countdown");
+
+        const timer = setInterval(() => {
+            seconds--;
+            countdown.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = redirectUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

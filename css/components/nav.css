@@ -37,13 +37,13 @@ nav .nav-links{
     justify-content: center;
     gap: 30px;
 }
-nav .nav-links .nav-link a{
+nav .nav-links .nav-link {
     font-family: var(--decorative-font);
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.5rem;
 }
-nav .nav-links .nav-link a:hover{
+nav .nav-links .nav-link:hover{
     text-decoration: underline;
 }
 nav .nav-btns{
@@ -51,7 +51,7 @@ nav .nav-btns{
     gap: 15px;
     list-style: none;
 }
-nav .nav-btns .nav-btn a{
+nav .nav-btns .nav-btn {
     font-family: var(--decorative-font);
     text-decoration: none;
     color: white;
@@ -61,9 +61,66 @@ nav .nav-btns .nav-btn a{
     background-color: var(--subtle-two);
     border: 1px solid var(--border-color);
 }
-nav .nav-btns .nav-btn a:hover{
+nav .nav-btns .nav-btn :hover{
     background-color: var(--subtle-two-light);
 }
-nav .nav-btns .nav-btn a:active{
+nav .nav-btns .nav-btn :active{
     background-color: var(--subtle-two);
+}
+#sidebar-check, #sidebar-open, #sidebar-close, #sidebar-overlay{
+    display: none;
+}
+
+@media(max-width: 1000px) {
+    #sidebar-open, #sidebar-close{
+        display: inline-block;
+        cursor: pointer;
+    }
+    #sidebar-check:checked ~ #sidebar-overlay{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--base-color);
+        opacity: 0.7;
+    }
+    nav .nav-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        bottom: 0;
+        background-color: var(--base-secondary);
+        width: 300px;
+        transition: 0.3s ease;
+    }
+    #sidebar-check:checked ~ .nav-group{
+        right: 0;
+    }
+    nav .nav-links, nav .nav-btns{
+        display: contents;
+    }
+    nav .nav-btns .nav-btn, nav .nav-links .nav-link {
+        display: block;
+        width: 300px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background-color: var(--base-secondary);
+        border: none;
+    }
+    nav .nav-btns .nav-btn:hover, nav .nav-links .nav-link:hover {
+        background-color: var(--accent-hover);
+        text-decoration: none;
+    }
+    #sidebar-close{
+        padding: 1rem;
+        cursor: pointer;
+    }
 }

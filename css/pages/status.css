@@ -1,0 +1,120 @@
+main {
+    min-height: calc(100vh - 5rem);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#background-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.7);
+    transform: scale(1.06);
+}
+.status-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    width: min(900px, calc(100% - 3rem));
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: var(--subtle-color-darkest);
+    border-radius: 24px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.server-logo {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.status-card .text {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+.status-card .text h2 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+.status-card .text > p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+.status-card .text .main {
+    flex: 1;
+    height: 100%;
+}
+#status-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: var(--legible-font);
+}
+#status-status.online {
+    background: var(--success-background);
+    color: var(--success-text);
+}
+#status-status.offline {
+    background: var(--error-background);
+    color: var(--error-text);
+}
+#status-status .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#status-status.online .dot {
+    background: var(--success) !important;
+}
+#status-status.offline .dot {
+    background: var(--error) !important;
+}
+/* Mobile */
+@media (max-width: 700px) {
+    .status-card {
+        align-items: center;
+        flex-direction: column;
+        width: min(450px, calc(100% - 2rem));
+        padding: 1.25rem;
+        text-align: center;
+    }
+    .server-logo {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        max-width: 280px;
+    }
+    .status-card .text {
+        width: 100%;
+        min-height: min-content;
+        gap: 20px;
+    }
+    .status-card .text .main {
+        flex: 0;
+        height: min-content;
+    }
+    #status-status {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
